@@ -18,7 +18,7 @@ import (
 	"github.com/keng42/go/cnigma/aes/utils"
 )
 
-// CBC struct stores the default values required for the aes-cbc alogrithm and implements the AES interface
+// CBC struct stores the default values required for the aes-cbc algorithm and implements the AES interface
 type CBC struct {
 	Key      []byte
 	Version  []byte
@@ -31,7 +31,7 @@ const (
 )
 
 // EncryptBytes encrypt bytes using default key.
-// The return value ciphertext consists of 2 bytes of version infomation,
+// The return value ciphertext consists of 2 bytes of version information,
 // 14 bytes of nonce and encrypted data.
 func (c *CBC) EncryptBytes(plaintext []byte, _ string) ([]byte, error) {
 	block, err := aes.NewCipher(c.Key)

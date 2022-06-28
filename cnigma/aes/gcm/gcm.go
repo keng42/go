@@ -17,7 +17,7 @@ import (
 	"github.com/keng42/go/cnigma/aes/utils"
 )
 
-// GCM struct stores the default values required for the aes-gcm alogrithm and implements the AES interface
+// GCM struct stores the default values required for the aes-gcm algorithm and implements the AES interface
 type GCM struct {
 	Key      []byte
 	Password string
@@ -33,7 +33,7 @@ const (
 
 // EncryptBytes encrypt bytes using default key and specify password.
 // If password is empty, use default password.
-// The return value ciphertext consists of 2 bytes of version infomation,
+// The return value ciphertext consists of 2 bytes of version information,
 // 14 bytes of nonce and encrypted data.
 func (g *GCM) EncryptBytes(plaintext []byte, password string) ([]byte, error) {
 	if password == "" {
@@ -134,7 +134,7 @@ func (g *GCM) DecryptText(ciphertext string, password string) (string, error) {
 // EncryptFile encrypt the src file and save to the dst file using default key and specify password.
 // The parameters src and dst are both file paths.
 // Reading the entire file into memory and encrypting it may have performance issue,
-// so divide the file info chunks of mulitiple fileBufferSize bytes and encrypt them separetely.
+// so divide the file info chunks of mulitiple fileBufferSize bytes and encrypt them separately.
 func (g *GCM) EncryptFile(src, dst, password string) error {
 	inFile, err := os.Open(src)
 	if err != nil {
@@ -149,7 +149,7 @@ func (g *GCM) EncryptFile(src, dst, password string) error {
 	defer outFile.Close()
 
 	// Since the encrypted output is 30 bytes larger than the input
-	// (containning 2 bytes of version infomation, 12 bytes of nonce and 16 bytes of auth tag),
+	// (containning 2 bytes of version information, 12 bytes of nonce and 16 bytes of auth tag),
 	// it's necessary to read 30 bytes less in order to decrypt the fileBufferSize byte at a time.
 	buf := make([]byte, FileBufferSize-30)
 	for {
