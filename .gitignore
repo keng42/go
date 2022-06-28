@@ -62,4 +62,5 @@ Temporary Items
 cnigma/testdata/*
 !cnigma/testdata/xxy007.png
 !cnigma/testdata/rsa-private-pkcs8.key
+covprofile
 

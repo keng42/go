@@ -1,13 +1,14 @@
 # go packages
 
+[![Coverage Status](https://coveralls.io/repos/github/keng42/go/badge.svg)](https://coveralls.io/github/keng42/go)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/keng42/go/blob/master/LICENSE)
+
 ## go/cnigma
 
 The golang implementation of [cnigma](https://github.com/keng42/cnigma)
 
 [![API Reference](https://pkg.go.dev/badge/github.com/keng42/go/cnigma)](https://pkg.go.dev/github.com/keng42/go/cnigma)
-[![Coverage Status](https://coveralls.io/repos/github/keng42/go/cnigma/badge.svg)](https://coveralls.io/github/keng42/go/cnigma)
 [![Go Report Card](https://goreportcard.com/badge/github.com/keng42/go/cnigma)](https://goreportcard.com/report/github.com/keng42/go/cnigma)
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/keng42/go/blob/master/LICENSE)
 
 ### Usage
 
