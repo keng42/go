@@ -99,6 +99,9 @@ func (r *RSA) Decrypt(ciphertext string) (string, error) {
 	}
 
 	cipherBuf, err := r.decode(ciphertext)
+	if err != nil {
+		return "", err
+	}
 
 	plaintext, err := rsa.DecryptOAEP(sha256.New(), rand.Reader, r.PrivateKey, cipherBuf, nil)
 	if err != nil {
