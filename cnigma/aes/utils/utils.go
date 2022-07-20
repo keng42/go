@@ -6,7 +6,7 @@ import (
 	"io"
 )
 
-// RandomBytes generate random bytes with specify size
+// RandomBytes generate random bytes with specify size(bytes)
 func RandomBytes(size int) ([]byte, error) {
 	buf := make([]byte, size)
 	// Never use more than 2^32 random nonces with a given key because of the risk of a repeat.

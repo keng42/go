@@ -2,6 +2,7 @@ package aes_test
 
 import (
 	"crypto/sha256"
+	"encoding/base64"
 	"encoding/hex"
 	"fmt"
 	"io"
@@ -141,4 +142,13 @@ func TestFilePath(t *testing.T) {
 	for _, file := range files {
 		fmt.Println(file.Name())
 	}
+}
+
+func TestNewKey(t *testing.T) {
+	key, err := aes.NewKey(256)
+	require.Nil(t, err)
+
+	keyBuf, err := base64.StdEncoding.DecodeString(key)
+	require.Nil(t, err)
+	require.Equal(t, 32, len(keyBuf))
 }

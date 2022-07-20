@@ -92,11 +92,11 @@ func NewKey(size int) (string, error) {
 	if size == 0 {
 		size = 256
 	}
-	if size != 128 && size != 192 || size != 256 {
+	if size != 128 && size != 192 && size != 256 {
 		return "", errors.New("key size allow 128-bit, 192-bit or 256-bit only")
 	}
 
-	buf, err := utils.RandomBytes(size)
+	buf, err := utils.RandomBytes(size / 8)
 	if err != nil {
 		return "", err
 	}
