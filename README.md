@@ -5,6 +5,9 @@
 [![API Reference](https://pkg.go.dev/badge/github.com/keng42/go)](https://pkg.go.dev/github.com/keng42/go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/keng42/go)](https://goreportcard.com/report/github.com/keng42/go)
 
+[cnigma](#cnigma)  
+[random](#random)
+
 ## cnigma
 
 The golang implementation of [cnigma](https://github.com/keng42/cnigma)
@@ -99,4 +102,35 @@ func main() {
 	}
 	fmt.Println("plaintext", plaintext)
 }
+```
+
+## random
+
+A simple app for generating random strings.
+
+### Usage
+
+```sh
+go install github.com/keng42/go/cmd/random
+
+random
+```
+
+Example output:
+
+```
+hex
+16 e6490cd6bb281fde
+32 4a569b71d9e49b00454bd6b6d72073e0
+64 09f34cfe26a3d4589bfff3220c3025331f7987793f3d433e87f7351ddc4317f5
+
+base64
+16 MoXXjCtj0xauGwo6
+32 cKoWekLvPCBnEItEkd16GujjycUyV7yE
+64 zv6dZHby9uZQKXCr72IL75yDQc6MzSBkM4J9StPAeWQIUZTmDSApmVEWQxzXYbZu
+
+ascii
+16 M#7A!->jt48N>`!G
+32 QJOl6XJZAdk^E&9''3+;CO?r*?YnYXe_
+64 ,B(i<,O<.C@SJYEjK=c)h6(Mh#C>8RUJUKS2QbWa>l`Mm't>\opMmN<o,Ac4OAZA
 ```

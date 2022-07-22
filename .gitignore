@@ -64,3 +64,4 @@ cnigma/testdata/*
 !cnigma/testdata/rsa-private-pkcs8.key
 covprofile
 
+build
